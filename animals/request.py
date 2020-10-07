@@ -22,6 +22,8 @@ ANIMALS = [
     }
 ]
 
+def get_all_animals():
+    return ANIMALS
 
 # Function with a single parameter
 def get_single_animal(id):
@@ -37,6 +39,3 @@ def get_single_animal(id):
             requested_animal = animal
 
     return requested_animal
-
-def get_all_animals():
-    return ANIMALS
