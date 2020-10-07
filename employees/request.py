@@ -1,35 +1,44 @@
-# EMPLOYEES = [
-#     {
-#         "id": 1,
-#         "name": "Captain Spaulding",
-#         "locationId": 1,
-#     },
-#     {
-#         "id": 2,
-#         "name": "John Wick",
-#         "locationId": 1,
-#     },
-#     {
-#         "id": 3,
-#         "name": "Asta",
-#         "locationId": 2,
-#     }
-# ]
+EMPLOYEES = [
+    {
+        "id": 1,
+        "name": "Captain Spaulding",
+        "locationId": 1,
+        "manager": True,
+        "full-time": True,
+        "hourly-rate": 30.50
+    },
+    {
+        "id": 2,
+        "name": "John Wick",
+        "locationId": 2,
+        "manager": True,
+        "full-time": True,
+        "hourly-rate": 30.50
+    },
+    {
+        "id": 3,
+        "name": "Tiny",
+        "locationId": 1,
+        "manager": False,
+        "full-time": True,
+        "hourly-rate": 15
+    }
+]
 
-# # Function with a single parameter
-# def get_employee_animal(id):
-#     # Variable to hold the found animal, if it exists
-#     requested_employee = None
+def get_all_employees():
+    return EMPLOYEES
 
-#     # Iterate the ANIMALS list above. Very similar to the
-#     # for..of loops you used in JavaScript.
-#     for employee in EMPLOYEES:
-#         # Dictionaries in Python use [] notation to find a key
-#         # instead of the dot notation that JavaScript used.
-#         if employee["id"] == id:
-#             requested_employee = employee
+# Function with a single parameter
+def get_single_employee(id):
+    # Variable to hold the found animal, if it exists
+    requested_employee = None
 
-#     return requested_employee
+    # Iterate the ANIMALS list above. Very similar to the
+    # for..of loops you used in JavaScript.
+    for employee in EMPLOYEES:
+        # Dictionaries in Python use [] notation to find a key
+        # instead of the dot notation that JavaScript used.
+        if employee["id"] == id:
+            requested_employee = employee
 
-# def get_all_employees():
-#     return EMPLOYEES
+    return requested_employee

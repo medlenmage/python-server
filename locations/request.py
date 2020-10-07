@@ -32,4 +32,4 @@ def get_single_location(id):
         if location["id"] == id:
             requested_location = location
 
-    return requested_animal
+    return requested_location
