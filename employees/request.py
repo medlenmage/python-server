@@ -5,7 +5,7 @@ EMPLOYEES = [
         "locationId": 1,
         "manager": True,
         "full-time": True,
-        "hourly-rate": 30.50
+        "hourly-rate": 30
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@ EMPLOYEES = [
         "locationId": 2,
         "manager": True,
         "full-time": True,
-        "hourly-rate": 30.50
+        "hourly-rate": 30
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@ EMPLOYEES = [
 
 def get_all_employees():
     return EMPLOYEES
-    
+
 def get_single_employee(id):
     requested_employee = None
     for employee in EMPLOYEES:
@@ -42,3 +42,11 @@ def create_employee(employee):
     employee["id"] = new_id
     EMPLOYEES.append(employee)
     return employee
+
+def delete_employee(id):
+    employee_index = -1
+    for index, employee in enumerate(EMPLOYEES):
+        if employee["id"] == id:
+            employee_index = index
+    if employee_index >= 0:
+        EMPLOYEES.pop(employee_index)
