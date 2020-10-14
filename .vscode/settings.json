@@ -1,0 +1,17 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "python-kennels",
+      "database": "C:\\Users\\joshu\\workspace\\python-server\\kennels.db"
+    },
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "kennels",
+      "database": "kennels.db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
