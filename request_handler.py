@@ -1,6 +1,6 @@
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from animals import get_all_animals, get_single_animal, delete_animal, update_animal
+from animals import get_all_animals, get_single_animal, delete_animal, update_animal, create_animal
 from locations import get_all_locations, get_single_location, create_location, delete_location, update_location
 from employees import get_all_employees, get_single_employee, create_employee, delete_employee, update_employee
 from customers import get_all_customers, get_single_customer, create_customer, delete_customer, update_customer, get_customers_by_email
@@ -120,7 +120,7 @@ class HandleRequests(BaseHTTPRequestHandler):
         # function next.
         if resource == "animals":
             new_animal = None
-            # new_animal = create_animal(post_body)
+            new_animal = create_animal(post_body)
             self.wfile.write(f"{new_animal}".encode())
         elif resource == "locations":
             new_location = None
@@ -183,3 +183,6 @@ def main():
   host = ''
   port = 8088
   HTTPServer((host, port), HandleRequests).serve_forever()
+
+if __name__ == "__main__":
+    main()
